@@ -1265,3 +1265,53 @@ footer a:hover,
 .contact-footer a:hover {
     color: #f47b2a;
 }
+
+/* Mobile navigation menu */
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #f47b2a;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background: #111;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px;
+    }
+}
